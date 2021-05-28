@@ -318,10 +318,10 @@
 						zoom: 12,
 						mapTypeId: google.maps.MapTypeId.ROADMAP,
 						scrollwheel: false,
-						center: [50.0705704,20.0440844],
+						center: [50.070619110413,20.043400230773],
 						styles: stylesOutput,
 					}).marker({
-						position: [50.0705704,20.0440844],
+						position: [50.070619110413,20.043400230773],
 						icon: mapIcon,
 					});
 				});
