@@ -317,7 +317,7 @@ ul.list li::before {
 }
 
 .section-content--bg1 {
-  background-image: url("../../assets/img/final/guests.jpg");
+  background-image: url("../../assets/img/final/guests.webp");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3669,19 +3669,11 @@ select.form-control-lg:not([size]):not([multiple]) {
 }
 
 .main-slider__item--img-1 {
-  background-image: url("../../assets/img/final/foto4_strona.jpg");
+  background-image: url("../../assets/img/final/slide-osiris.webp");
 }
 
 .main-slider__item--img-2 {
-  background-image: url("../../assets/img/samples/slide-2.jpg");
-}
-
-.main-slider__item--img-3 {
-  background-image: url("../../assets/img/samples/slide-3.jpg");
-}
-
-.main-slider__item--img-4 {
-  background-image: url("../../assets/img/samples/slide-4.jpg");
+  background-image: url("../../assets/img/final/slide-laponia.webp");
 }
 
 /* Slide Content */
@@ -5457,7 +5449,7 @@ body.search-active .search-form-control .search-form-toggler__icon {
 =============================================*/
 .page-heading {
   text-align: center;
-  background-image: url("../../assets/img/final/slide-osiris.jpg");
+  background-image: url("../../assets/img/final/slide-osiris.webp");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8045,35 +8037,35 @@ Images
 }
 
 .room-slider__item--osiris--img-1 {
-  background-image: url("../../assets/img/final/slide1-osiris.jpg");
+  background-image: url("../../assets/img/final/slide1-osiris.webp");
 }
 
 .room-slider__item--osiris--img-2 {
-  background-image: url("../../assets/img/final/slide2-osiris.jpg");
+  background-image: url("../../assets/img/final/slide2-osiris.webp");
 }
 
 .room-slider__item--osiris--img-3 {
-  background-image: url("../../assets/img/final/slide3-osiris.jpg");
+  background-image: url("../../assets/img/final/slide3-osiris.webp");
 }
 
 .room-slider__item--osiris--img-4 {
-  background-image: url("../../assets/img/final/slide4-osiris.jpg");
+  background-image: url("../../assets/img/final/slide4-osiris.webp");
 }
 
 .room-slider__item--laponia--img-1 {
-  background-image: url("../../assets/img/final/slide1-laponia.jpg");
+  background-image: url("../../assets/img/final/slide1-laponia.webp");
 }
 
 .room-slider__item--laponia--img-2 {
-  background-image: url("../../assets/img/final/slide1-laponia.jpg");
+  background-image: url("../../assets/img/final/slide1-laponia.webp");
 }
 
 .room-slider__item--laponia--img-3 {
-  background-image: url("../../assets/img/final/slide1-laponia.jpg");
+  background-image: url("../../assets/img/final/slide1-laponia.webp");
 }
 
 .room-slider__item--laponia--img-4 {
-  background-image: url("../../assets/img/final/slide1-laponia.jpg");
+  background-image: url("../../assets/img/final/slide1-laponia.webp");
 }
 
 /*----------  Room Title  ----------*/
