@@ -10,8 +10,7 @@
 
 	// Preloader
 	$(window).on('load', function () {
-		$('#js-preloader').delay(0).fadeOut();
-		$('#js-preloader-overlay').delay(200).fadeOut('slow');
+		$('#js-preloader-overlay').delay(0).fadeOut(200);
 	});
 	$.fn.exists = function () {
 		return this.length > 0;
