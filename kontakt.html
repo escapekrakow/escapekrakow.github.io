@@ -162,7 +162,21 @@
 							</li>
 						</ul>
 		
-					</div>
+		                <div data-lockme="small"></div>
+		                <script type="text/javascript">
+		                    (function(d, t, q){
+		                        let id = 'lockme-'+t, js;
+		                        if(!d[q]('#'+id)){
+		                            js=d.createElement('script');
+		                            js.defer=true;
+		                            js.id=id;
+		                            js.src='https://widget.lock.me/pl/widget/small/757B8qAXKAZ285UFj9xRGtTvcgZLXvbV.js';
+		                            d[q]('head').appendChild(js);
+		                        }
+		                    })(document, 'small', 'querySelector')
+		                </script>
+		
+		            </div>
 					<div class="col-md-8 offset-md-1">
 						<h2>Formularz kontaktowy</h2>
 						<!-- Contact Form -->
