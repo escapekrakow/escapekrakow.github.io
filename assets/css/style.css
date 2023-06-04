@@ -4220,10 +4220,6 @@ img {
   background-color: rgba(27, 27, 27, 0.55);
 }
 
-.header__logo {
-  margin-right: 20px;
-}
-
 @media (min-width: 768px) {
   .header__logo {
     margin-right: 36px;
