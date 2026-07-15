@@ -4,6 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
+    <!-- Redirect legacy .html URLs from the old site to the new SPA routes.
+         Runs before the app loads; relies on the 404.html SPA fallback so
+         any old path reaches this script on GitHub Pages. -->
+    <script>
+      (function () {
+        var map = {
+          "/index.html": "/", "/index_en.html": "/",
+          "/pokoje.html": "/", "/rooms.html": "/",
+          "/ozyrys.html": "/", "/osiris.html": "/",
+          "/laponia.html": "/", "/lapland.html": "/",
+          "/regulamin.html": "/", "/terms.html": "/",
+          "/bezpieczenstwo.html": "/safety", "/safety.html": "/safety",
+          "/faq.html": "/faq", "/faq_en.html": "/faq",
+          "/kontakt.html": "/contact", "/contact.html": "/contact",
+          "/rezerwacje.html": "/booking", "/bookings.html": "/booking",
+          "/vouchery.html": "/vouchers", "/vouchers.html": "/vouchers"
+        };
+        var target = map[location.pathname];
+        if (target && target !== location.pathname) {
+          location.replace(target + location.search + location.hash);
+        }
+      })();
+    </script>
+
     <meta property="og:title" content="Escape Kraków - Serce Ozyrysa" />
     <meta property="og:description" content="Przeżyj niezapomnianą przygodę w najlepszym Escape Roomie w Krakowie. Odkryj tajemnicę Serca Ozyrysa." />
     <meta property="og:type" content="website" />
