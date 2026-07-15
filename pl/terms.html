@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="pl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Language routing + legacy redirects, run before the app loads.
+         Every language is prefixed (/pl, /en, /de). The root "/" redirects to
+         the visitor's language; bare paths (and old .html URLs) are redirected
+         to their prefixed equivalent. Relies on the 404.html SPA fallback so
+         any path reaches this script on GitHub Pages. -->
+    <script>
+      (function () {
+        var path = location.pathname;
+        var map = {
+          "/index.html": "/pl", "/index_en.html": "/en",
+          "/pokoje.html": "/pl", "/rooms.html": "/en",
+          "/ozyrys.html": "/pl", "/osiris.html": "/en",
+          "/laponia.html": "/pl", "/lapland.html": "/en",
+          "/regulamin.html": "/pl/terms", "/terms.html": "/en/terms",
+          "/bezpieczenstwo.html": "/pl/safety", "/safety.html": "/en/safety",
+          "/faq.html": "/pl/faq", "/faq_en.html": "/en/faq",
+          "/kontakt.html": "/pl/contact", "/contact.html": "/en/contact",
+          "/rezerwacje.html": "/pl/booking", "/bookings.html": "/en/booking",
+          "/vouchery.html": "/pl/vouchers", "/vouchers.html": "/en/vouchers"
+        };
+        if (map[path]) { location.replace(map[path] + location.search + location.hash); return; }
+        var seg = path.split("/")[1];
+        if (seg === "pl" || seg === "en" || seg === "de") return; // already localized
+        if (path === "/" || path === "") {
+          var saved = null;
+          try { saved = localStorage.getItem("lang"); } catch (e) {}
+          var lang;
+          if (saved === "pl" || saved === "en" || saved === "de") {
+            lang = saved;
+          } else {
+            var n = (navigator.language || "").slice(0, 2).toLowerCase();
+            lang = n === "en" ? "en" : n === "de" ? "de" : "pl";
+          }
+          location.replace("/" + lang + location.search + location.hash);
+        } else {
+          location.replace("/pl" + path + location.search + location.hash);
+        }
+      })();
+    </script>
+
+    <title>Regulamin | Escape Kraków</title>
+    <meta name="description" content="Regulamin Escape Kraków – zasady rezerwacji, przebiegu gry, bezpieczeństwa, płatności i reklamacji.">
+
+    <meta property="og:title" content="Regulamin | Escape Kraków">
+    <meta property="og:description" content="Regulamin Escape Kraków – zasady rezerwacji, przebiegu gry, bezpieczeństwa, płatności i reklamacji.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://escapekrakow.pl/opengraph.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regulamin | Escape Kraków">
+    <meta name="twitter:description" content="Regulamin Escape Kraków – zasady rezerwacji, przebiegu gry, bezpieczeństwa, płatności i reklamacji.">
+    <meta name="twitter:image" content="https://escapekrakow.pl/opengraph.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EntertainmentBusiness",
+      "name": "Escape Kraków",
+      "description": "Escape room w Krakowie – Serce Ozyrysa. 90-minutowa przygoda dla 2–5 osób.",
+      "url": "https://escapekrakow.pl",
+      "telephone": "+48123963388",
+      "email": "escapekrakow.kontakt@gmail.com",
+      "image": "https://escapekrakow.pl/opengraph.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "os. Ogrodowe 12",
+        "postalCode": "31-916",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.0785,
+        "longitude": 20.0385
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/escape.rooms.krakow",
+        "https://www.tiktok.com/@escapekrakow"
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;family=Montserrat:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+    <script type="module" crossorigin="" src="/assets/index-JZpSGAhE.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-Zatb6c69.css">
+  <link rel="canonical" href="https://escapekrakow.pl/pl/terms"><meta property="og:url" content="https://escapekrakow.pl/pl/terms"><meta property="og:locale" content="pl"><meta name="robots" content="index, follow"><link rel="alternate" hreflang="pl" href="https://escapekrakow.pl/pl/terms"><link rel="alternate" hreflang="en" href="https://escapekrakow.pl/en/terms"><link rel="alternate" hreflang="de" href="https://escapekrakow.pl/de/terms"><link rel="alternate" hreflang="x-default" href="https://escapekrakow.pl/pl/terms"></head>
+  <body>
+    <div id="root"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><div class="min-h-screen bg-background text-foreground"><nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20"><div class="container mx-auto px-4 h-16 flex items-center justify-between"><a href="/pl/" class="text-xl md:text-2xl font-display font-bold text-primary tracking-wider hover:text-primary/80 transition-colors cursor-pointer">ESCAPE KRAKÓW</a><div class="hidden lg:flex items-center gap-6 xl:gap-8"><a href="/pl/" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Strona Główna</a><a href="/pl/safety" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Bezpieczeństwo</a><a href="/pl/vouchers" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Vouchery</a><a href="/pl/faq" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">FAQ</a><a href="/pl/contact" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Kontakt</a><button class="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors uppercase font-medium text-sm outline-none" type="button" id="radix-_r_0_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇵🇱</span>PL</button><a href="/pl/booking"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 py-2 bg-primary text-background hover:bg-primary/90 font-bold uppercase tracking-wider px-6 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">Rezerwacja</button></a></div><div class="flex items-center gap-4 lg:hidden"><button class="flex items-center gap-2 text-foreground hover:text-primary transition-colors uppercase font-bold text-sm outline-none" type="button" id="radix-_r_2_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇵🇱</span>PL</button><button class="text-foreground hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></nav><div class="pt-24 pb-12 container mx-auto px-4 max-w-4xl"><div style="opacity: 1; transform: none;"><h1 class="text-4xl font-display font-bold text-primary mb-8 text-center">Regulamin</h1><div class="bg-card border border-primary/20 rounded-lg p-6 md:p-8 shadow-xl space-y-8"><section class="space-y-4"><p class="text-muted-foreground leading-relaxed">Podmiotem realizującym usługi jest Escape spółka cywilna, Os. Złotej Jesieni 7, 31-827 Kraków, NIP: 6783182806.</p><p class="text-muted-foreground leading-relaxed">Każda osoba dokonująca rezerwacji na stronie escapekrakow.pl, lockme.pl lub dokonująca opłaty przez operatora płatności Krajowy Integrator Płatności S.A. (dalej KIP) zobowiązana jest do zapoznania się z niniejszym regulaminem oraz przekazania jego treści pozostałym uczestnikom gry.</p><p class="text-muted-foreground leading-relaxed">Uczestnicy zobowiązani są przestrzegać niniejszego regulaminu oraz wskazówek pracowników.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Rezerwacja</h2><p class="text-muted-foreground leading-relaxed">Rezerwacji dokonać można korzystając ze strony escapekrakow.pl lub lockme.pl.</p><p class="text-muted-foreground leading-relaxed">Podczas dokonywania rezerwacji należy podać następujące informacje:</p><ul class="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed marker:text-primary"><li>liczba uczestników,</li><li>nazwa wybranego pokoju,</li><li>data i godzina rezerwacji,</li><li>numer telefonu kontaktowego,</li><li>adres email,</li><li>informacje dodatkowe (np. faktura, wykorzystanie vouchera, realizacja kodu zniżkowego itp.).</li></ul><p class="text-muted-foreground leading-relaxed">Potwierdzeniem rezerwacji jest automatyczny email wysłany do osoby dokonującej rezerwacji. W przypadku braku potwierdzenia, konieczny jest kontakt telefoniczny.</p><p class="text-muted-foreground leading-relaxed">Rezerwację można odwołać lub zmienić telefonicznie, mailowo bądź osobiście najpóźniej 24 godziny przed planowaną grą.</p><p class="text-muted-foreground leading-relaxed">Opłaty za rezerwacje, które nie zostały odwołane lub zmienione 24 godziny przed planowaną wizytą, nie podlegają zwrotowi.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Gra</h2><p class="text-muted-foreground leading-relaxed">Na miejscu gry należy pojawić się 10 minut przed jej rozpoczęciem. Prosimy nie przyjeżdżać wcześniej. W przypadku spóźnienia, może się okazać, że będziemy zmuszeni skrócić Waszą rozgrywkę a nawet ją odwołać - niestety w takiej sytuacji nie przysługuje zwrot środków.</p><p class="text-muted-foreground leading-relaxed">Dostępny jest jeden pokój dla graczy: Serce Ozyrysa.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Ograniczenia</h2><ul class="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed marker:text-primary"><li>Osoby poniżej 13 roku życia mogą brać udział w grze wyłącznie w towarzystwie osoby dorosłej.</li><li>Uczestnictwo osób niepełnosprawnych lub osób o ograniczonej sprawności fizycznej - gra wyłącznie z osobą towarzyszącą. Konieczne jest wcześniejsze zgłoszenie takiej sytuacji. Pracownicy mogą zdecydować, że podczas takiej gry wymagana będzie opieka lub gra nie będzie mogła się odbyć ze względów na bezpieczeństwo uczestników.</li><li>Gra w pokoju Serce Ozyrysa wymaga od uczestników dobrej sprawności fizycznej, koniecznej do poruszania się w niskiej przestrzeni (poniżej 1 metra). W razie wątpliwości, prosimy o kontakt.</li><li>W grze może uczestniczyć od 2 do 5 graczy.</li><li>Gra w pokoju Serce Ozyrysa trwa 90 minut. Należy zarezerwować dodatkowe 30 minut na sprawy organizacyjne.</li><li>Osoby pod wpływem alkoholu lub innych środków odurzających nie zostaną dopuszczone do gry.</li><li>Ze względu na specyfikę zabawy (zdjęcia pokoju nie są nigdzie publikowane, żeby gracze mogli cieszyć się zaskoczeniem), nie wolno robić zdjęć ani nagrywać filmów.</li><li>Prosimy o pozostawienie telefonów i innych urządzeń w szafkach lub u obsługi.</li><li>W przypadku wykonywania zdjęć lub filmów podczas gry, mistrz gry kończy grę, a uczestnicy muszą opuścić pokój.</li></ul></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Zasady bezpieczeństwa</h2><ul class="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed marker:text-primary"><li>Drzwi główne do pokoju są zawsze otwarte.</li><li>W każdym pokoju znajduje się przycisk bezpieczeństwa, który otwiera wszystkie inne drzwi, jednocześnie włącza oświetlenie awaryjne, odcina zasilanie do pokoju i tym samym kończy grę.</li></ul><p class="text-muted-foreground leading-relaxed">W przypadku niezastosowania się do punktów regulaminu i/lub zaleceń pracowników pracownicy mają prawo wyprosić uczestników gry z terenu obiektu. W takim wypadku uczestnikom gry nie przysługuje zwrot pieniędzy.</p><p class="text-muted-foreground leading-relaxed">Organizator nie ponosi odpowiedzialności za szkody na mieniu i osobiste powstałe z winy uczestników.</p><p class="text-muted-foreground leading-relaxed">W zakresie nieuregulowanym w niniejszym regulaminie odpowiednie zastosowanie mają przepisy Kodeksu cywilnego.</p><p class="text-muted-foreground leading-relaxed">Wszyscy uczestnicy biorą udział w grze na własną odpowiedzialność.</p><p class="text-muted-foreground leading-relaxed">Uczestnicy zabawy zobowiązują się do nieutrudniania i nieprzeszkadzania w grze innym osobom korzystającym z lokalu.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Płatności</h2><p class="text-muted-foreground leading-relaxed">Płatności na miejscu dokonać można gotówką, kartą płatniczą lub voucherem.</p><p class="text-muted-foreground leading-relaxed">Cennik znajduje się na stronie https://lockme.pl/pl/firma/escape-krakow i jest zależny od pokoju, godziny i dnia tygodnia.</p><p class="text-muted-foreground leading-relaxed">Dokonując rezerwacji przez portal lockme.pl zgadzasz się na to, że ten portal uzyskuje dostęp do Twoich danych osobowych na zasadach określonych w Regulaminie usługi lockme.pl.</p><p class="text-muted-foreground leading-relaxed">Dokonując płatności przez operatora KIP zgadzasz się na to, że operator uzyskuje dostęp do Twoich danych osobowych na zasadach określonych w Regulaminie usługi KIP.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Przetwarzanie danych osobowych</h2><p class="text-muted-foreground leading-relaxed">Rezerwując pokój escape room za pośrednictwem serwisu, musisz podać swoje dane osobowe niezbędne do realizacji zamówienia, tj. imię i nazwisko, adres e-mail i numer telefonu. W przypadku rezerwacji vouchera kurierem lub pocztą tradycyjną podajesz nam również swój adres. W przypadku prośby o fakturę również otrzymujemy od Ciebie dane osobowe. Tym samym dokonując rezerwacji w naszym systemie automatycznie wyrażasz zgodę na ich przetwarzanie do celów realizacji rezerwacji oraz do celów marketingowych związanych z ofertą escapekrakow.pl.</p></section><section class="space-y-4"><h2 class="text-2xl font-display font-bold text-primary">Reklamacje</h2><p class="text-muted-foreground leading-relaxed">Reklamacja w związku z niewykonaniem lub nienależytym wykonaniem usługi winna zostać przesłana w formie pisemnej lub na adres e-mail: escapekrakow.kontakt@gmail.com i określać:</p><ul class="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed marker:text-primary"><li>dane osoby składającej reklamację umożliwiające kontakt z nią,</li><li>numer rezerwacji (jeśli dotyczy),</li><li>zwięzłe opisanie zastrzeżeń związanych z reklamacją,</li><li>okoliczności uzasadniające reklamację.</li></ul><p class="text-muted-foreground leading-relaxed">Usługodawca zobowiązany jest udzielić odpowiedzi na reklamację w terminie do 14 dni od daty jej otrzymania, wskazując, czy uznaje reklamację oraz w jaki sposób i w jakim terminie zamierza ją załatwić, lub informując o braku podstaw do uznania reklamacji wraz z uzasadnieniem swojego stanowiska. Jeżeli Usługodawca nie udzielił odpowiedzi na reklamację w terminie, o którym mowa w zdaniu poprzednim, uważa się, że uznał reklamację.</p></section></div></div></div><footer class="bg-black py-12 border-t border-primary/20"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row justify-between items-center gap-8"><div class="text-center md:text-left"><h3 class="text-xl font-display font-bold text-primary mb-2">ESCAPE KRAKÓW</h3><p class="text-muted-foreground text-sm">© 2021-2026 Escape Kraków. <br class="md:hidden">Wszystkie prawa zastrzeżone.</p><a href="/pl/terms" class="inline-block mt-3 text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">Regulamin</a></div><div class="flex flex-col items-center gap-4"><span class="text-primary font-display font-bold uppercase tracking-wider text-sm">Obserwuj nas</span><div class="flex gap-6"><a href="https://www.facebook.com/escape.rooms.krakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.tiktok.com/@escapekrakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video w-5 h-5" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></a></div></div><div class="flex flex-col items-center md:items-end gap-2"></div></div></div></footer></div></div>
+  
+</body></html>

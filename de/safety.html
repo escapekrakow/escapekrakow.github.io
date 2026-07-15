@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="de"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Language routing + legacy redirects, run before the app loads.
+         Every language is prefixed (/pl, /en, /de). The root "/" redirects to
+         the visitor's language; bare paths (and old .html URLs) are redirected
+         to their prefixed equivalent. Relies on the 404.html SPA fallback so
+         any path reaches this script on GitHub Pages. -->
+    <script>
+      (function () {
+        var path = location.pathname;
+        var map = {
+          "/index.html": "/pl", "/index_en.html": "/en",
+          "/pokoje.html": "/pl", "/rooms.html": "/en",
+          "/ozyrys.html": "/pl", "/osiris.html": "/en",
+          "/laponia.html": "/pl", "/lapland.html": "/en",
+          "/regulamin.html": "/pl/terms", "/terms.html": "/en/terms",
+          "/bezpieczenstwo.html": "/pl/safety", "/safety.html": "/en/safety",
+          "/faq.html": "/pl/faq", "/faq_en.html": "/en/faq",
+          "/kontakt.html": "/pl/contact", "/contact.html": "/en/contact",
+          "/rezerwacje.html": "/pl/booking", "/bookings.html": "/en/booking",
+          "/vouchery.html": "/pl/vouchers", "/vouchers.html": "/en/vouchers"
+        };
+        if (map[path]) { location.replace(map[path] + location.search + location.hash); return; }
+        var seg = path.split("/")[1];
+        if (seg === "pl" || seg === "en" || seg === "de") return; // already localized
+        if (path === "/" || path === "") {
+          var saved = null;
+          try { saved = localStorage.getItem("lang"); } catch (e) {}
+          var lang;
+          if (saved === "pl" || saved === "en" || saved === "de") {
+            lang = saved;
+          } else {
+            var n = (navigator.language || "").slice(0, 2).toLowerCase();
+            lang = n === "en" ? "en" : n === "de" ? "de" : "pl";
+          }
+          location.replace("/" + lang + location.search + location.hash);
+        } else {
+          location.replace("/pl" + path + location.search + location.hash);
+        }
+      })();
+    </script>
+
+    <title>Sicherheit | Escape Kraków</title>
+    <meta name="description" content="Sicherheit bei Escape Kraków – Türen immer offen, Sicherheitsknopf, Überwachung und volle Unterstützung durch den Spielleiter.">
+
+    <meta property="og:title" content="Sicherheit | Escape Kraków">
+    <meta property="og:description" content="Sicherheit bei Escape Kraków – Türen immer offen, Sicherheitsknopf, Überwachung und volle Unterstützung durch den Spielleiter.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://escapekrakow.pl/opengraph.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sicherheit | Escape Kraków">
+    <meta name="twitter:description" content="Sicherheit bei Escape Kraków – Türen immer offen, Sicherheitsknopf, Überwachung und volle Unterstützung durch den Spielleiter.">
+    <meta name="twitter:image" content="https://escapekrakow.pl/opengraph.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EntertainmentBusiness",
+      "name": "Escape Kraków",
+      "description": "Escape room w Krakowie – Serce Ozyrysa. 90-minutowa przygoda dla 2–5 osób.",
+      "url": "https://escapekrakow.pl",
+      "telephone": "+48123963388",
+      "email": "escapekrakow.kontakt@gmail.com",
+      "image": "https://escapekrakow.pl/opengraph.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "os. Ogrodowe 12",
+        "postalCode": "31-916",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.0785,
+        "longitude": 20.0385
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/escape.rooms.krakow",
+        "https://www.tiktok.com/@escapekrakow"
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;family=Montserrat:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+    <script type="module" crossorigin="" src="/assets/index-JZpSGAhE.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-Zatb6c69.css">
+  <link rel="canonical" href="https://escapekrakow.pl/de/safety"><meta property="og:url" content="https://escapekrakow.pl/de/safety"><meta property="og:locale" content="de"><meta name="robots" content="index, follow"><link rel="alternate" hreflang="pl" href="https://escapekrakow.pl/pl/safety"><link rel="alternate" hreflang="en" href="https://escapekrakow.pl/en/safety"><link rel="alternate" hreflang="de" href="https://escapekrakow.pl/de/safety"><link rel="alternate" hreflang="x-default" href="https://escapekrakow.pl/pl/safety"></head>
+  <body>
+    <div id="root"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><div class="min-h-screen bg-background text-foreground"><nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20"><div class="container mx-auto px-4 h-16 flex items-center justify-between"><a href="/de/" class="text-xl md:text-2xl font-display font-bold text-primary tracking-wider hover:text-primary/80 transition-colors cursor-pointer">ESCAPE KRAKÓW</a><div class="hidden lg:flex items-center gap-6 xl:gap-8"><a href="/de/" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Startseite</a><a href="/de/safety" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-primary">Sicherheit</a><a href="/de/vouchers" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Gutscheine</a><a href="/de/faq" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">FAQ</a><a href="/de/contact" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Kontakt</a><button class="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors uppercase font-medium text-sm outline-none" type="button" id="radix-_r_0_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇩🇪</span>DE</button><a href="/de/booking"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 py-2 bg-primary text-background hover:bg-primary/90 font-bold uppercase tracking-wider px-6 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">Jetzt buchen</button></a></div><div class="flex items-center gap-4 lg:hidden"><button class="flex items-center gap-2 text-foreground hover:text-primary transition-colors uppercase font-bold text-sm outline-none" type="button" id="radix-_r_2_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇩🇪</span>DE</button><button class="text-foreground hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></nav><div class="pt-24 pb-12 container mx-auto px-4"><div style="opacity: 1; transform: none;"><div class="max-w-3xl mx-auto text-center mb-12"><h1 class="text-4xl font-display font-bold text-primary mb-6">Sicherheit</h1><p class="text-lg text-muted-foreground leading-relaxed">Die Sorge um die Sicherheit der Spieler hat uns von Anfang an beim Bau der Räume geleitet. Wir möchten, dass Sie sich wohl fühlen und sich zu 100% auf den Spaß konzentrieren. Die Räume haben eine obligatorische Evakuierungsübung unter der Aufsicht eines Brandschutzspezialisten durchlaufen.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"><div style="opacity: 1; transform: none;"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-fire-extinguisher w-8 h-8 text-primary" aria-hidden="true"><path d="M15 6.5V3a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v3.5"></path><path d="M9 18h8"></path><path d="M18 3h-3"></path><path d="M11 3a6 6 0 0 0-6 6v11"></path><path d="M5 13h4"></path><path d="M17 10a4 4 0 0 0-8 0v10a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2Z"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Brandschutznormen</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Wir erfüllen strenge Brandschutznormen. Die Räume sind aus nicht brennbaren oder schwer entflammbaren Materialien gebaut (Klasse B-s2 oder besser).</p></div></div></div><div style="opacity: 0; transform: translateY(1.20233px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-8 h-8 text-primary" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Feuerlöscher</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Jeder Raum ist mit leicht zugänglichen Feuerlöschern ausgestattet.</p></div></div></div><div style="opacity: 0; transform: translateY(4.22315px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb w-8 h-8 text-primary" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Notbeleuchtung</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Unabhängige Notbeleuchtung befindet sich in jedem Raum.</p></div></div></div><div style="opacity: 0; transform: translateY(8.48905px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-8 h-8 text-primary" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Sicherheitssystem</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Sicherheitsknöpfe schalten sofort den Spielstrom ab und schalten die volle Notbeleuchtung ein.</p></div></div></div><div style="opacity: 0; transform: translateY(13.7199px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-open w-8 h-8 text-primary" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Offene Türen</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Raumtüren sind während des Spiels niemals verschlossen. Der Ausgang ist immer möglich.</p></div></div></div><div style="opacity: 0; transform: translateY(19.863px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big w-8 h-8 text-primary" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Bewegungsfreiheit</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Spieler werden während des Spiels niemals immobilisiert oder angekettet.</p></div></div></div><div style="opacity: 0; transform: translateY(20px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video w-8 h-8 text-primary" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></div><div class="tracking-tight text-xl font-display font-bold">Überwachung</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Alle Räume werden ständig überwacht. Der Game Master überwacht das Spiel und ist in ständigem Kontakt.</p></div></div></div><div style="opacity: 0; transform: translateY(20px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-off w-8 h-8 text-primary" aria-hidden="true"><path d="M10.513 4.856 13.12 2.17a.5.5 0 0 1 .86.46l-1.377 4.317"></path><path d="M15.656 10H20a1 1 0 0 1 .78 1.63l-1.72 1.773"></path><path d="M16.273 16.273 10.88 21.83a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14H4a1 1 0 0 1-.78-1.63l4.507-4.643"></path><path d="m2 2 20 20"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Sicherer Strom</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Spieler haben keinen direkten Zugang zu 230V-Installationen. Keine Gasinstallation oder offenes Feuer.</p></div></div></div><div style="opacity: 0; transform: translateY(20px);"><div class="rounded-xl border text-card-foreground shadow h-full bg-card border-primary/20 hover:border-primary/50 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="mb-4 p-3 bg-primary/10 w-fit rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-pulse w-8 h-8 text-primary" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"></path></svg></div><div class="tracking-tight text-xl font-display font-bold">Erste Hilfe</div></div><div class="p-6 pt-0"><p class="text-muted-foreground">Ein voll ausgestatteter Erste-Hilfe-Kasten ist immer vor Ort verfügbar.</p></div></div></div></div></div></div><footer class="bg-black py-12 border-t border-primary/20"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row justify-between items-center gap-8"><div class="text-center md:text-left"><h3 class="text-xl font-display font-bold text-primary mb-2">ESCAPE KRAKÓW</h3><p class="text-muted-foreground text-sm">© 2021-2026 Escape Kraków. <br class="md:hidden">Alle Rechte vorbehalten.</p><a href="/de/terms" class="inline-block mt-3 text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">Geschäftsbedingungen</a></div><div class="flex flex-col items-center gap-4"><span class="text-primary font-display font-bold uppercase tracking-wider text-sm">Folgen Sie uns</span><div class="flex gap-6"><a href="https://www.facebook.com/escape.rooms.krakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.tiktok.com/@escapekrakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video w-5 h-5" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></a></div></div><div class="flex flex-col items-center md:items-end gap-2"></div></div></div></footer></div></div>
+  
+</body></html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="pl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Language routing + legacy redirects, run before the app loads.
+         Every language is prefixed (/pl, /en, /de). The root "/" redirects to
+         the visitor's language; bare paths (and old .html URLs) are redirected
+         to their prefixed equivalent. Relies on the 404.html SPA fallback so
+         any path reaches this script on GitHub Pages. -->
+    <script>
+      (function () {
+        var path = location.pathname;
+        var map = {
+          "/index.html": "/pl", "/index_en.html": "/en",
+          "/pokoje.html": "/pl", "/rooms.html": "/en",
+          "/ozyrys.html": "/pl", "/osiris.html": "/en",
+          "/laponia.html": "/pl", "/lapland.html": "/en",
+          "/regulamin.html": "/pl/terms", "/terms.html": "/en/terms",
+          "/bezpieczenstwo.html": "/pl/safety", "/safety.html": "/en/safety",
+          "/faq.html": "/pl/faq", "/faq_en.html": "/en/faq",
+          "/kontakt.html": "/pl/contact", "/contact.html": "/en/contact",
+          "/rezerwacje.html": "/pl/booking", "/bookings.html": "/en/booking",
+          "/vouchery.html": "/pl/vouchers", "/vouchers.html": "/en/vouchers"
+        };
+        if (map[path]) { location.replace(map[path] + location.search + location.hash); return; }
+        var seg = path.split("/")[1];
+        if (seg === "pl" || seg === "en" || seg === "de") return; // already localized
+        if (path === "/" || path === "") {
+          var saved = null;
+          try { saved = localStorage.getItem("lang"); } catch (e) {}
+          var lang;
+          if (saved === "pl" || saved === "en" || saved === "de") {
+            lang = saved;
+          } else {
+            var n = (navigator.language || "").slice(0, 2).toLowerCase();
+            lang = n === "en" ? "en" : n === "de" ? "de" : "pl";
+          }
+          location.replace("/" + lang + location.search + location.hash);
+        } else {
+          location.replace("/pl" + path + location.search + location.hash);
+        }
+      })();
+    </script>
+
+    <title>Vouchery | Escape Kraków</title>
+    <meta name="description" content="Podaruj przygodę – voucher na escape room Serce Ozyrysa w Krakowie. Idealny pomysł na prezent.">
+
+    <meta property="og:title" content="Vouchery | Escape Kraków">
+    <meta property="og:description" content="Podaruj przygodę – voucher na escape room Serce Ozyrysa w Krakowie. Idealny pomysł na prezent.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://escapekrakow.pl/opengraph.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vouchery | Escape Kraków">
+    <meta name="twitter:description" content="Podaruj przygodę – voucher na escape room Serce Ozyrysa w Krakowie. Idealny pomysł na prezent.">
+    <meta name="twitter:image" content="https://escapekrakow.pl/opengraph.jpg">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EntertainmentBusiness",
+      "name": "Escape Kraków",
+      "description": "Escape room w Krakowie – Serce Ozyrysa. 90-minutowa przygoda dla 2–5 osób.",
+      "url": "https://escapekrakow.pl",
+      "telephone": "+48123963388",
+      "email": "escapekrakow.kontakt@gmail.com",
+      "image": "https://escapekrakow.pl/opengraph.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "os. Ogrodowe 12",
+        "postalCode": "31-916",
+        "addressLocality": "Kraków",
+        "addressCountry": "PL"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.0785,
+        "longitude": 20.0385
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/escape.rooms.krakow",
+        "https://www.tiktok.com/@escapekrakow"
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&amp;family=Montserrat:ital,wght@0,400..700;1,400..700&amp;display=swap" rel="stylesheet">
+    <script type="module" crossorigin="" src="/assets/index-JZpSGAhE.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/index-Zatb6c69.css">
+  <link rel="canonical" href="https://escapekrakow.pl/pl/vouchers"><meta property="og:url" content="https://escapekrakow.pl/pl/vouchers"><meta property="og:locale" content="pl"><meta name="robots" content="index, follow"><link rel="alternate" hreflang="pl" href="https://escapekrakow.pl/pl/vouchers"><link rel="alternate" hreflang="en" href="https://escapekrakow.pl/en/vouchers"><link rel="alternate" hreflang="de" href="https://escapekrakow.pl/de/vouchers"><link rel="alternate" hreflang="x-default" href="https://escapekrakow.pl/pl/vouchers"></head>
+  <body>
+    <div id="root"><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><div class="min-h-screen bg-background text-foreground"><nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20"><div class="container mx-auto px-4 h-16 flex items-center justify-between"><a href="/pl/" class="text-xl md:text-2xl font-display font-bold text-primary tracking-wider hover:text-primary/80 transition-colors cursor-pointer">ESCAPE KRAKÓW</a><div class="hidden lg:flex items-center gap-6 xl:gap-8"><a href="/pl/" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Strona Główna</a><a href="/pl/safety" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Bezpieczeństwo</a><a href="/pl/vouchers" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-primary">Vouchery</a><a href="/pl/faq" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">FAQ</a><a href="/pl/contact" class="text-xs xl:text-sm uppercase tracking-widest font-medium transition-colors hover:text-primary cursor-pointer text-foreground/80">Kontakt</a><button class="flex items-center gap-2 text-foreground/80 hover:text-primary transition-colors uppercase font-medium text-sm outline-none" type="button" id="radix-_r_0_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇵🇱</span>PL</button><a href="/pl/booking"><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 hover-elevate active-elevate-2 border border-primary-border min-h-9 py-2 bg-primary text-background hover:bg-primary/90 font-bold uppercase tracking-wider px-6 shadow-[0_0_15px_rgba(212,175,55,0.3)] hover:shadow-[0_0_25px_rgba(212,175,55,0.5)] transition-all duration-300">Rezerwacja</button></a></div><div class="flex items-center gap-4 lg:hidden"><button class="flex items-center gap-2 text-foreground hover:text-primary transition-colors uppercase font-bold text-sm outline-none" type="button" id="radix-_r_2_" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span class="text-lg leading-none">🇵🇱</span>PL</button><button class="text-foreground hover:text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></div></div></nav><div class="pt-24 pb-12 container mx-auto px-4 max-w-5xl"><div style="opacity: 1; transform: none;"><div class="text-center mb-12"><h1 class="text-4xl font-display font-bold text-primary mb-6">Voucher Prezentowy</h1><p class="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">Chcesz zrobić swoim bliskim prezent? Kup voucher na wejście do Serca Ozyrysa! To niezapomniana przygoda, którą będą wspominać latami.</p></div><div class="grid md:grid-cols-2 gap-8 mb-12"><div class="rounded-xl border text-card-foreground shadow bg-card border-primary/20 hover:border-primary/40 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="tracking-tight text-2xl font-display font-bold text-primary flex items-center gap-3"><span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-background text-lg">1</span>Co musisz zrobić Ty?</div></div><div class="p-6 pt-0 space-y-6"><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg></div><div><h4 class="font-bold mb-1">Wyślij zgłoszenie</h4><p class="text-muted-foreground text-sm">Napisz na <a href="mailto:escapekrakow.kontakt@gmail.com" class="text-primary hover:underline">escapekrakow.kontakt@gmail.com</a> podając:</p><ul class="list-disc list-inside text-muted-foreground text-sm mt-2 ml-2"><li>Swoje imię i nazwisko</li><li>Imię i nazwisko lub ksywkę osoby obdarowanej</li></ul></div></div><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-credit-card w-5 h-5" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg></div><div><h4 class="font-bold mb-1">Opłać voucher</h4><p class="text-muted-foreground text-sm">W ciągu 1 dnia otrzymasz link do płatności on-line. Opłać go wygodnie przez internet.</p></div></div><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket w-5 h-5" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg></div><div><h4 class="font-bold mb-1">Odbierz voucher</h4><p class="text-muted-foreground text-sm">W ciągu kilku dni otrzymasz od nas elegancki elektroniczny voucher z unikalnym kodem wstępu.</p></div></div></div></div><div class="rounded-xl border text-card-foreground shadow bg-card border-primary/20 hover:border-primary/40 transition-colors"><div class="flex flex-col space-y-1.5 p-6"><div class="tracking-tight text-2xl font-display font-bold text-primary flex items-center gap-3"><span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-background text-lg">2</span>Co robi osoba obdarowana?</div></div><div class="p-6 pt-0 space-y-6"><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer-click w-5 h-5" aria-hidden="true"><path d="M14 4.1 12 6"></path><path d="m5.1 8-2.9-.8"></path><path d="m6 12-1.9 2"></path><path d="M7.2 2.2 8 5.1"></path><path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"></path></svg></div><div><h4 class="font-bold mb-1">Rezerwuje termin</h4><p class="text-muted-foreground text-sm">Wchodzi na naszą stronę i wybiera dogodny termin w kalendarzu rezerwacji.</p></div></div><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket w-5 h-5" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path d="M13 11v2"></path></svg></div><div><h4 class="font-bold mb-1">Wybiera płatność 'Voucher'</h4><p class="text-muted-foreground text-sm">Jako metodę płatności zaznacza "Voucher" i w uwagach wpisuje kod z otrzymanego prezentu.</p></div></div><div class="flex gap-4"><div class="mt-1 bg-primary/10 p-2 rounded-full h-fit text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-5 h-5" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div><h4 class="font-bold mb-1">Bawi się z ekipą</h4><p class="text-muted-foreground text-sm">Pojawia się na miejscu z grupą (max 5 osób) i przeżywa niesamowitą przygodę!</p></div></div></div></div></div><div class="bg-primary/5 border border-primary/20 rounded-lg p-6 text-center max-w-2xl mx-auto"><div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12"><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gift w-6 h-6 text-primary" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"></path></svg><div class="text-left"><p class="text-sm text-muted-foreground uppercase tracking-wider">Cena Vouchera</p><p class="text-2xl font-bold text-primary">401 PLN</p></div></div><div class="h-px w-full md:w-px md:h-12 bg-primary/20"></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-6 h-6 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><div class="text-left"><p class="text-sm text-muted-foreground uppercase tracking-wider">Ważność</p><p class="text-xl font-bold text-foreground">12 Miesięcy</p></div></div><div class="h-px w-full md:w-px md:h-12 bg-primary/20"></div><div class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-primary" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><div class="text-left"><p class="text-sm text-muted-foreground uppercase tracking-wider">Dla kogo</p><p class="text-xl font-bold text-foreground">2-5 Osób</p></div></div></div><p class="text-xs text-muted-foreground mt-4 pt-4 border-t border-primary/10">* Cena stała niezależnie od liczebności grupy (max 5 osób).</p></div></div></div><footer class="bg-black py-12 border-t border-primary/20"><div class="container mx-auto px-4"><div class="flex flex-col md:flex-row justify-between items-center gap-8"><div class="text-center md:text-left"><h3 class="text-xl font-display font-bold text-primary mb-2">ESCAPE KRAKÓW</h3><p class="text-muted-foreground text-sm">© 2021-2026 Escape Kraków. <br class="md:hidden">Wszystkie prawa zastrzeżone.</p><a href="/pl/terms" class="inline-block mt-3 text-sm text-muted-foreground hover:text-primary transition-colors underline underline-offset-4">Regulamin</a></div><div class="flex flex-col items-center gap-4"><span class="text-primary font-display font-bold uppercase tracking-wider text-sm">Obserwuj nas</span><div class="flex gap-6"><a href="https://www.facebook.com/escape.rooms.krakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook w-5 h-5" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.tiktok.com/@escapekrakow" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-background transition-colors duration-300" aria-label="TikTok"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-video w-5 h-5" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></a></div></div><div class="flex flex-col items-center md:items-end gap-2"></div></div></div></footer></div></div>
+  
+</body></html>
